@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CooperarPerú acompaña a niñas, niños y familias de Tankarpata, Cusco, con educación, salud y desarrollo comunitario. Únete como voluntario o apoya la causa."
+    />
+    <meta name="theme-color" content="#c45c26" />
+    <title>CooperarPerú | El reto está hecho, solo faltas tú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%23C45C26'/%3E%3Cpath d='M10 44 L24 26 L32 36 L42 22 L54 44 Z' fill='%23F4E4C1'/%3E%3Ccircle cx='46' cy='18' r='6' fill='%23E8B84A'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#hero">Saltar al contenido</a>
+
+    <header class="site-header" id="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#hero" aria-label="CooperarPerú, ir al inicio">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <rect width="48" height="48" rx="14" fill="currentColor" />
+              <path d="M8 35 L18 22 L24 30 L32 16 L40 35 Z" fill="#f7efe2" />
+              <circle cx="34" cy="14" r="5" fill="#e8b84a" />
+            </svg>
+          </span>
+          <span class="brand__text">
+            <strong>CooperarPerú</strong>
+            <small>Tankarpata · Cusco</small>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          type="button"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <a class="nav-link" href="#hero">Inicio</a>
+          <a class="nav-link" href="#nosotros">Nosotros</a>
+          <a class="nav-link" href="#proyectos">Proyectos</a>
+          <a class="nav-link" href="#voluntariado">Voluntariado</a>
+          <a class="nav-cta" href="#donar">Donar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=80"
+            alt=""
+            class="hero__image"
+          />
+          <video
+            class="hero__video"
+            muted
+            loop
+            playsinline
+            poster="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=80"
+          >
+            <!-- Sustituye el src por un video de Tankarpata cuando esté disponible -->
+          </video>
+          <div class="hero__scrim"></div>
+        </div>
+
+        <div class="hero__content">
+          <p class="eyebrow">ONG · Trabajo comunitario en Tankarpata</p>
+          <h1>El reto está hecho, los objetivos trazados... Solo faltas tú.</h1>
+          <p class="hero__lead">
+            Desde 2010 acompañamos a niñas, niños y familias de Tankarpata, a 20 minutos
+            del Cusco histórico, con apoyo educativo, salud infantil y desarrollo
+            comunitario. El centro ya está en marcha. Hoy el cambio te espera a ti.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#postular">Quiero Ser Voluntario</a>
+            <a class="btn btn--ghost" href="#donar">Apoyar Causa</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" id="metricas" aria-label="Indicadores de impacto">
+        <div class="metrics__grid">
+          <article class="metric">
+            <span class="metric__value" data-count="500" data-prefix="+" data-suffix="">0</span>
+            <span class="metric__label">Niños Beneficiados</span>
+          </article>
+          <article class="metric">
+            <span class="metric__value metric__value--text">Comunidad</span>
+            <span class="metric__label">Tankarpata &amp; Cusco</span>
+          </article>
+          <article class="metric">
+            <span class="metric__value" data-count="350" data-prefix="+" data-suffix="">0</span>
+            <span class="metric__label">Voluntarios del Mundo</span>
+          </article>
+          <article class="metric">
+            <span class="metric__value" data-count="100" data-prefix="" data-suffix="%">0</span>
+            <span class="metric__label">Proyectos Sostenibles</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="pillars" id="nosotros">
+        <div class="section-heading">
+          <p class="eyebrow">Programa Yanapasunchis</p>
+          <h2>Pilares de acción en Tankarpata</h2>
+          <p>
+            Trabajamos de forma cooperativa para fortalecer capacidades locales.
+            No es solo una escuela: es un espacio seguro donde la educación, la
+            salud y la comunidad se construyen juntas.
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="bento-card bento-card--wide">
+            <figure class="bento-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80"
+                alt="Niños en un taller educativo con materiales escolares"
+              />
+            </figure>
+            <div class="bento-card__body">
+              <span class="chip">01 · Educación</span>
+              <h3>Educación y Talleres escolares</h3>
+              <p>
+                Semanas temáticas, refuerzo escolar, ciencia, arte y biblioteca
+                comunitaria. Acompañamos a niñas y niños de 3 a 15 años con tareas,
+                inglés, teatro, danza y un salón de trabajo donde cada tarde se
+                enciende la curiosidad.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <figure class="bento-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"
+                alt="Atención de salud comunitaria"
+              />
+            </figure>
+            <div class="bento-card__body">
+              <span class="chip">02 · Salud</span>
+              <h3>Nutrición y Salud Infantil</h3>
+              <p>
+                Campañas médicas, prevención odontológica, higiene, nutrición y
+                campañas contra el friaje. Cuidamos cuerpos y sonrisas para que
+                el aprendizaje pueda florecer.
+              </p>
+            </div>
+          </article>
+
+          <article class="bento-card">
+            <figure class="bento-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=80"
+                alt="Agua limpia como símbolo de infraestructura comunitaria"
+              />
+            </figure>
+            <div class="bento-card__body">
+              <span class="chip">03 · Comunidad</span>
+              <h3>Desarrollo Comunitario</h3>
+              <p>
+                Acceso a agua potable, saneamiento e infraestructura en Tankarpata.
+                Impulsamos canalización, espacios seguros y proyectos de
+                autosostenibilidad para las familias.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="stories" id="voluntariado">
+        <div class="stories__intro">
+          <p class="eyebrow eyebrow--light">Historias de impacto</p>
+          <h2>Voces del centro comunitario</h2>
+          <p>
+            Voluntarios internacionales y familias locales comparten el intercambio
+            cultural, el cariño de los peques y el trabajo diario en Tankarpata.
+          </p>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport">
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide is-active">
+                <blockquote>
+                  <p>
+                    “Estoy muy agradecida con el centro de apoyo CooperarPerú porque
+                    da mucho apoyo a los niños, hay buena enseñanza. Gracias a la
+                    institución mis hijos han aprendido a desenvolverse. También nos
+                    dan apoyo psicológico. Hay médicos que están al día por nuestra
+                    salud y la de nuestros hijos.”
+                  </p>
+                  <footer>
+                    <strong>Madre de familia</strong>
+                    <span>Comunidad de Tankarpata, Cusco</span>
+                  </footer>
+                </blockquote>
+              </li>
+              <li class="carousel__slide">
+                <blockquote>
+                  <p>
+                    “Llegué buscando una ONG que trabajase con niñas y niños, en
+                    castellano, para mejorar su calidad de vida. Tuve la gran suerte
+                    de que mi hijo compartiera conmigo esta experiencia: un equipo
+                    humano inmejorable, de España, Francia, Alemania, Estados Unidos
+                    y Venezuela. El intercambio cultural es real.”
+                  </p>
+                  <footer>
+                    <strong>Voluntaria internacional</strong>
+                    <span>España · Primera cooperación fuera de su país</span>
+                  </footer>
+                </blockquote>
+              </li>
+              <li class="carousel__slide">
+                <blockquote>
+                  <p>
+                    “Me convenció que acogen a cualquier persona con ganas de ayudar,
+                    independiente de profesión, edad o tiempo. Lo más sorprendente
+                    fue la alegría con la que te reciben los peques: a nada que les
+                    des cariño, te lo devuelven multiplicado. Cada uno se llevó un
+                    pedacito de mí.”
+                  </p>
+                  <footer>
+                    <strong>Tamara</strong>
+                    <span>Voluntaria · Centro comunitario de Tankarpata</span>
+                  </footer>
+                </blockquote>
+              </li>
+              <li class="carousel__slide">
+                <blockquote>
+                  <p>
+                    “Desde el primer momento me hicieron sentir bienvenida, tanto
+                    los niños como el resto de voluntarios. La manera de trabajar
+                    permite aportar ideas y sentirte parte de su vida, no un simple
+                    observador. Aprendí que todos debemos, con acciones simples,
+                    realizar el cambio que queremos ver en el mundo.”
+                  </p>
+                  <footer>
+                    <strong>Carmen López</strong>
+                    <span>Voluntaria internacional</span>
+                  </footer>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel__btn" type="button" data-carousel-prev aria-label="Testimonio anterior">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="carousel__dots" data-carousel-dots></div>
+            <button class="carousel__btn" type="button" data-carousel-next aria-label="Testimonio siguiente">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="news" id="proyectos">
+        <div class="section-heading">
+          <p class="eyebrow">Últimas noticias</p>
+          <h2>Actualidad en la comunidad</h2>
+          <p>
+            Campañas y proyectos que sostienen el día a día de las familias de
+            Tankarpata y de las comunidades altoandinas de Cusco.
+          </p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80"
+                alt="Equipo de salud en una campaña comunitaria"
+              />
+              <figcaption>Salud</figcaption>
+            </figure>
+            <div class="news-card__body">
+              <h3>Campaña de Salud Integral y Prevención en Tankarpata</h3>
+              <p>
+                Médicos, odontólogos y oftalmólogos atienden a niñas y niños del
+                centro. Higiene, nutrición y prevención para que el derecho a la
+                salud llegue también a las comunidades rurales de Cusco.
+              </p>
+              <span class="news-card__meta">Tankarpata · Campaña comunitaria</span>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1464663757037-0387d21c8e04?auto=format&fit=crop&w=1000&q=80"
+                alt="Paisaje andino y acceso al agua en altura"
+              />
+              <figcaption>Agua</figcaption>
+            </figure>
+            <div class="news-card__body">
+              <h3>Proyecto Agua Potable: Mejorando la calidad de vida de nuestros niños</h3>
+              <p>
+                Impulsamos la canalización de agua segura en Tankarpata. Sin agua
+                potable no hay salud ni escuela plena: este proyecto busca dignidad
+                cotidiana para cada familia.
+              </p>
+              <span class="news-card__meta">Infraestructura · En progreso</span>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1000&q=80"
+                alt="Montañas andinas cubiertas de nieve durante el invierno"
+              />
+              <figcaption>Friaje</figcaption>
+            </figure>
+            <div class="news-card__body">
+              <h3>Campaña contra el Friaje: Abrigo y talleres para el invierno andino</h3>
+              <p>
+                Con “Abrázame fuerte” recolectamos ropa de abrigo y acompañamos
+                talleres para proteger a niñas, niños y familias frente al frío
+                de las comunidades altoandinas de Cusco.
+              </p>
+              <span class="news-card__meta">Campaña Abrázame fuerte</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta" id="postular">
+        <div class="final-cta__inner">
+          <p class="eyebrow eyebrow--light">Súmate hoy</p>
+          <h2>¿Listo para ser parte del cambio en Cusco?</h2>
+          <p>
+            No pedimos una profesión específica ni un tiempo mínimo: pedimos ganas
+            de colaborar, de aprender y de dejar una huella junto a los niños de
+            Tankarpata.
+          </p>
+          <a class="btn btn--light" href="mailto:cooperarperu@gmail.com?subject=Postulaci%C3%B3n%20al%20voluntariado%20CooperarPer%C3%BA">
+            Postular al Voluntariado
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="donar">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand brand--footer" href="#hero">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <rect width="48" height="48" rx="14" fill="currentColor" />
+                <path d="M8 35 L18 22 L24 30 L32 16 L40 35 Z" fill="#f7efe2" />
+                <circle cx="34" cy="14" r="5" fill="#e8b84a" />
+              </svg>
+            </span>
+            <span class="brand__text">
+              <strong>CooperarPerú</strong>
+              <small>Asociación civil 11116229</small>
+            </span>
+          </a>
+          <p>
+            Trabajo comunitario con niñas, niños y familias de Tankarpata y otras
+            comunidades altoandinas de la región Cusco, desde 2010.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contacto en Cusco</h3>
+          <address>
+            Tankarpata, 20 min del centro histórico<br />
+            Cusco, Perú · 3 380 m s. n. m.
+          </address>
+          <p>
+            T. <a href="tel:+5184265864">+51 84 265 864</a><br />
+            WhatsApp <a href="https://wa.me/51984501418">+51 984 501 418</a><br />
+            E. <a href="mailto:cooperarperu@gmail.com">cooperarperu@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Iniciativa aliada</h3>
+          <p>
+            <strong>Hostal Solidario Caja Mágica</strong><br />
+            Calle Suytukatu 759, San Blas, Cusco<br />
+            El hospedaje sostiene el centro comunitario de Tankarpata.
+          </p>
+          <p>
+            Reservas: <a href="tel:+5184253429">+51 84 253 429</a><br />
+            <a href="https://hostalcajamagica.com" rel="noopener noreferrer" target="_blank">hostalcajamagica.com</a>
+          </p>
+        </div>
+
+        <div class="footer-col footer-col--donate">
+          <h3>Cuentas y donaciones</h3>
+          <p>
+            Aceptamos fondos, materiales escolares y ropa de abrigo. Para
+            transferencia bancaria, Yape o PayPal solicita las cuentas oficiales:
+          </p>
+          <a class="btn btn--donate" href="mailto:cooperarperu@gmail.com?subject=Donaci%C3%B3n%20CooperarPer%C3%BA">
+            Pedir datos de donación
+          </a>
+          <ul class="socials" aria-label="Redes sociales">
+            <li><a href="https://www.facebook.com/cooperarperu" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/cooperarperu" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/cooperarperu" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© <span data-year></span> CooperarPerú. Todos los derechos reservados. Hecho con cariño desde Cusco.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
