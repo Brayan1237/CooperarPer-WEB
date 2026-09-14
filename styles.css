@@ -87,6 +87,10 @@ body.nav-open {
   overflow: hidden;
 }
 
+body.nav-open .site-header {
+  background: rgba(251, 246, 238, 0.96);
+}
+
 body.nav-open .nav-shell {
   background: rgba(251, 246, 238, 0.98);
   border-color: rgba(43, 28, 18, 0.08);
@@ -94,10 +98,13 @@ body.nav-open .nav-shell {
 
 .site-header {
   position: fixed;
-  inset: 0 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 50;
   padding: 0.85rem 1.25rem 0;
-  transition: padding 0.35s var(--ease);
+  transition: padding 0.35s var(--ease), background-color 0.35s var(--ease);
 }
 
 .nav-shell {
@@ -119,6 +126,9 @@ body.nav-open .nav-shell {
 
 .site-header.is-scrolled {
   padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  background-color: #fbf6ee;
+  box-shadow: 0 10px 28px rgba(43, 28, 18, 0.08);
 }
 
 .site-header.is-scrolled .nav-shell {
@@ -299,6 +309,12 @@ body.nav-open .nav-toggle span {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  background: rgba(20, 14, 8, 0.55);
+  color: #f3d48a;
+  backdrop-filter: blur(10px);
 }
 
 .eyebrow--light {
@@ -651,6 +667,24 @@ h1 {
 
 .footer-col a {
   color: var(--ochre);
+}
+
+.footer-col .brand--footer {
+  color: #fff;
+}
+
+.donate-list {
+  padding-left: 1.1rem;
+  margin: 0.4rem 0 0.9rem;
+}
+
+.donate-list a {
+  white-space: nowrap;
+}
+
+.footer-col .btn--donate {
+  color: var(--ink);
+  width: 100%;
 }
 
 .socials {
