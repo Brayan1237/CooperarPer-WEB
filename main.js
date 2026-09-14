@@ -4,6 +4,15 @@
   const nav = document.getElementById("site-nav");
   const year = document.querySelector("[data-year]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const userAgent = navigator.userAgent || "";
+  const isIOS = /iP(hone|ad|od)/.test(userAgent);
+  const isInAppBrowser = /WhatsApp|FBAN|FBAV|Instagram|Line\//i.test(userAgent);
+  const isWKWebView = isIOS && typeof window.webkit !== "undefined" && typeof window.safari === "undefined";
+  const freezeSmoothScroll = reduceMotion || isInAppBrowser || isWKWebView;
+
+  if (freezeSmoothScroll) {
+    document.documentElement.style.scrollBehavior = "auto";
+  }
 
   if (year) {
     year.textContent = String(new Date().getFullYear());
@@ -46,6 +55,25 @@
     }
   });
 
+  const scrollToSection = (target) => {
+    const headerOffset = header ? header.getBoundingClientRect().height : 0;
+    const top =
+      target.getBoundingClientRect().top +
+      (window.pageYOffset || document.documentElement.scrollTop) -
+      headerOffset;
+
+    if (freezeSmoothScroll) {
+      window.scrollTo(0, Math.max(0, top));
+      return;
+    }
+
+    try {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (err) {
+      window.scrollTo(0, Math.max(0, top));
+    }
+  };
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
       const id = anchor.getAttribute("href");
@@ -53,7 +81,7 @@
       const target = document.querySelector(id);
       if (!target) return;
       event.preventDefault();
-      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      scrollToSection(target);
     });
   });
 

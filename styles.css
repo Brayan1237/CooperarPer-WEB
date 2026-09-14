@@ -26,8 +26,9 @@
 }
 
 html {
+  height: -webkit-fill-available;
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 0.75rem);
+  scroll-padding-top: calc(var(--header-h) + 0.75rem + env(safe-area-inset-top, 0px));
 }
 
 body {
@@ -36,6 +37,12 @@ body {
   color: var(--ink);
   background: var(--cream);
   line-height: 1.65;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  -webkit-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 img,
@@ -57,6 +64,15 @@ h3,
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a,
+button,
+.bento-card,
+.news-card {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  -webkit-appearance: none;
 }
 
 address {
@@ -103,7 +119,10 @@ body.nav-open .nav-shell {
   right: 0;
   width: 100%;
   z-index: 50;
-  padding: 0.85rem 1.25rem 0;
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-bottom: 0;
   transition: padding 0.35s var(--ease), background-color 0.35s var(--ease);
 }
 
@@ -119,13 +138,13 @@ body.nav-open .nav-shell {
   border-radius: 999px;
   background: rgba(255, 253, 248, 0.18);
   border: 1px solid rgba(255, 253, 248, 0.22);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
 }
 
 .site-header.is-scrolled {
-  padding-top: 0.55rem;
+  padding-top: max(0.55rem, env(safe-area-inset-top));
   padding-bottom: 0.55rem;
   background-color: #fbf6ee;
   box-shadow: 0 10px 28px rgba(43, 28, 18, 0.08);
@@ -257,7 +276,8 @@ body.nav-open .nav-toggle span {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   align-items: end;
   color: #fff;
@@ -314,7 +334,8 @@ body.nav-open .nav-toggle span {
 .hero .eyebrow {
   background: rgba(20, 14, 8, 0.55);
   color: #f3d48a;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .eyebrow--light {
@@ -647,6 +668,7 @@ h1 {
   background: #160e09;
   color: rgba(247, 239, 226, 0.88);
   padding: 4rem 1.4rem 1.4rem;
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
 .footer-grid {
